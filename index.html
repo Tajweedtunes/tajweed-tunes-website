@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +37,10 @@
     }
 
     .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  display: block;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      display: block;
     }
 
     nav a {
@@ -49,6 +48,7 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 15px;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -61,7 +61,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 70px 20px;
+      padding: 80px 20px;
       background: linear-gradient(to bottom, #ffffff, #f7efe5);
     }
 
@@ -70,20 +70,30 @@
     }
 
     .hero h1 {
-      font-size: 55px;
-      margin-bottom: 10px;
+      font-size: 58px;
+      margin-bottom: 12px;
       color: #3b2416;
+      letter-spacing: 1px;
     }
 
     .hero h2 {
       color: #b8860b;
-      font-size: 27px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 22px;
     }
 
     .hero p {
       font-size: 19px;
-      margin-bottom: 30px;
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: #4b382c;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -94,10 +104,29 @@
       border-radius: 7px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #3b2416;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #3b2416;
+      padding: 13px 27px;
+      border: 2px solid #b8860b;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: #b8860b;
+      color: white;
     }
 
     section {
@@ -109,6 +138,305 @@
       font-size: 34px;
       margin-bottom: 20px;
       color: #3b2416;
+    }
+
+    .about {
+      background: #f7efe5;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #fffaf5;
+      border: 1px solid #e5d8c8;
+      border-radius: 12px;
+      padding: 30px 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+    }
+
+    .card h3 {
+      color: #b8860b;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .programmes {
+      background: #f7efe5;
+    }
+
+    .contact {
+      background: #ffffff;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    .contact-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      background: #3b2416;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 78vh;
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      section h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    <img src="1000263334-removebg-preview.png" alt="Tajweed Tunes Logo">
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>Tajweed Tunes</h1>
+
+    <h2>Qur'anic & Educational Services</h2>
+
+    <p>
+      Promoting excellence in Qur'an recitation, Tajweed,
+      memorization, revision and Islamic education.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#services" class="btn">
+        Explore Our Services
+      </a>
+
+      <a href="#contact" class="btn-outline">
+        Contact Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about" id="about">
+
+  <h2>About Tajweed Tunes</h2>
+
+  <p>
+    Tajweed Tunes is a Qur'anic and educational platform dedicated
+    to promoting excellence in Qur'an recitation, Tajweed,
+    memorization, revision and beneficial Islamic education.
+  </p>
+
+</section>
+
+<section id="services">
+
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Qur'an Recitation</h3>
+      <p>
+        Improve your Qur'an recitation with proper pronunciation
+        and Tajweed.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Tajweed Classes</h3>
+      <p>
+        Learn the rules of Tajweed through practical and structured lessons.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Qur'an Memorization</h3>
+      <p>
+        Structured support for Hifz, revision and memorization correction.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Muraja'ah</h3>
+      <p>
+        Strengthen Qur'an retention through consistent and guided revision.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="programmes" id="programmes">
+
+  <h2>Our Programmes</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Huffaz Experience</h3>
+      <p>
+        Educational conversations and inspiring experiences from
+        Qur'an memorizers and teachers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Online Qur'an Classes</h3>
+      <p>
+        Flexible Qur'anic learning for students through online classes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Intensive Hifz</h3>
+      <p>
+        Focused Qur'an memorization programmes designed for serious students.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <h2>Contact Tajweed Tunes</h2>
+
+  <p>
+    Email: tajweedtunes1@gmail.com
+  </p>
+
+  <p>
+    WhatsApp: 08160633435
+  </p>
+
+  <p>
+    WhatsApp: 08020813530
+  </p>
+
+  <div class="contact-buttons">
+
+    <a
+      href="mailto:tajweedtunes1@gmail.com"
+      class="btn">
+      Send Us an Email
+    </a>
+
+    <a
+      href="https://wa.me/2348160633435"
+      class="btn"
+      target="_blank">
+      WhatsApp: 08160633435
+    </a>
+
+    <a
+      href="https://wa.me/2348020813530"
+      class="btn"
+      target="_blank">
+      WhatsApp: 08020813530
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Tajweed Tunes. All Rights Reserved.
+  </p>
+
+  <p>
+    Qur'anic & Educational Services
+  </p>
+
+</footer>
+
+</body>
+</html>      color: #3b2416;
     }
 
     .about {
