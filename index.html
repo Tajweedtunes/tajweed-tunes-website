@@ -280,17 +280,70 @@
       font-weight: bold;
     }
 
+    /* CONTACT SECTION */
+
     .contact {
       background: #ffffff;
     }
 
-    .contact p {
-      margin: 10px 0;
+    .contact-intro {
+      max-width: 700px;
+      margin: 0 auto 40px;
       font-size: 17px;
+      color: #4b382c;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-card {
+      background: #fffaf5;
+      border: 1px solid #e5d8c8;
+      border-radius: 12px;
+      padding: 30px 20px;
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+    }
+
+    .contact-icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card h3 {
+      color: #b8860b;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      color: #3b2416;
+      font-weight: bold;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-link:hover {
+      color: #b8860b;
     }
 
     .contact-buttons {
-      margin-top: 25px;
+      margin-top: 35px;
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -309,6 +362,7 @@
     }
 
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 12px;
@@ -346,6 +400,10 @@
 
       section h2 {
         font-size: 30px;
+      }
+
+      .contact-card {
+        padding: 25px 18px;
       }
     }
   </style>
@@ -603,11 +661,71 @@
 
   <h2>Contact Tajweed Tunes</h2>
 
-  <p>Email: tajweedtunes1@gmail.com</p>
+  <p class="contact-intro">
+    We would be pleased to hear from you. For Qur'anic classes,
+    Tajweed lessons, memorization, Muraja'ah or programme enquiries,
+    please contact us through any of the channels below.
+  </p>
 
-  <p>WhatsApp: 08160633435</p>
+  <div class="contact-grid">
 
-  <p>WhatsApp: 08020813530</p>
+    <div class="contact-card">
+
+      <div class="contact-icon">✉️</div>
+
+      <h3>Email</h3>
+
+      <p>
+        Send us an email for enquiries and further information.
+      </p>
+
+      <a
+        href="mailto:tajweedtunes1@gmail.com"
+        class="contact-link">
+        tajweedtunes1@gmail.com
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="contact-icon">📱</div>
+
+      <h3>WhatsApp</h3>
+
+      <p>
+        Chat with Tajweed Tunes directly on WhatsApp.
+      </p>
+
+      <a
+        href="https://wa.me/2348160633435"
+        class="contact-link"
+        target="_blank">
+        08160633435
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="contact-icon">📱</div>
+
+      <h3>WhatsApp</h3>
+
+      <p>
+        You can also reach us through our second WhatsApp line.
+      </p>
+
+      <a
+        href="https://wa.me/2348020813530"
+        class="contact-link"
+        target="_blank">
+        08020813530
+      </a>
+
+    </div>
+
+  </div>
 
   <div class="contact-buttons">
 
@@ -621,14 +739,7 @@
       href="https://wa.me/2348160633435"
       class="btn"
       target="_blank">
-      WhatsApp: 08160633435
-    </a>
-
-    <a
-      href="https://wa.me/2348020813530"
-      class="btn"
-      target="_blank">
-      WhatsApp: 08020813530
+      Chat on WhatsApp
     </a>
 
   </div>
