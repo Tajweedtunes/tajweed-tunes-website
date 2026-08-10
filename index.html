@@ -144,10 +144,52 @@
       background: #f7efe5;
     }
 
-    .about p {
+    .about-intro {
       max-width: 850px;
       margin: auto;
       font-size: 17px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .about-card {
+      background: #ffffff;
+      border: 1px solid #e5d8c8;
+      border-radius: 12px;
+      padding: 30px 22px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+    }
+
+    .about-card h3 {
+      color: #b8860b;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .about-card p {
+      font-size: 16px;
+    }
+
+    .values-list {
+      margin-top: 15px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .values-list li {
+      margin: 8px 0;
+      font-weight: bold;
     }
 
     .services {
@@ -302,11 +344,46 @@
 
   <h2>About Tajweed Tunes</h2>
 
-  <p>
+  <p class="about-intro">
     Tajweed Tunes is a Qur'anic and educational platform dedicated
     to promoting excellence in Qur'an recitation, Tajweed,
     memorization, revision and beneficial Islamic education.
+    We are committed to nurturing learners with strong Qur'anic
+    foundations, sound character and a lasting connection with the Qur'an.
   </p>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+      <h3>Our Vision</h3>
+      <p>
+        To become a trusted platform for Qur'anic excellence,
+        nurturing generations who recite, memorize, understand
+        and live by the teachings of the Qur'an.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Mission</h3>
+      <p>
+        To provide quality Qur'anic education through effective
+        Tajweed instruction, memorization, revision and beneficial
+        Islamic learning in a supportive and structured environment.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Core Values</h3>
+      <ul class="values-list">
+        <li>Qur'anic Excellence</li>
+        <li>Integrity</li>
+        <li>Discipline</li>
+        <li>Continuous Learning</li>
+        <li>Service & Impact</li>
+      </ul>
+    </div>
+
+  </div>
 
 </section>
 
