@@ -24,30 +24,40 @@
       line-height: 1.7;
     }
 
+    /* HEADER */
+
     header {
-      background: #3b2416;
+      background: rgba(59, 36, 22, 0.98);
       color: white;
-      padding: 18px 7%;
+      padding: 14px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.15);
     }
 
     .logo img {
-      width: 60px;
-      height: 60px;
+      width: 58px;
+      height: 58px;
       object-fit: contain;
       display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 24px;
       font-size: 15px;
+      font-weight: 600;
       transition: 0.3s;
     }
 
@@ -55,38 +65,69 @@
       color: #d4af37;
     }
 
+    /* HERO */
+
     .hero {
-      min-height: 85vh;
+      min-height: 88vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 80px 20px;
-      background: linear-gradient(to bottom, #ffffff, #f7efe5);
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.16), transparent 35%),
+        linear-gradient(135deg, #ffffff, #f7efe5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border: 1px solid rgba(184,134,11,0.18);
+      border-radius: 50%;
+      top: -100px;
+      right: -80px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(184,134,11,0.15);
+      border-radius: 50%;
+      bottom: -90px;
+      left: -70px;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
-      font-size: 58px;
-      margin-bottom: 12px;
+      font-size: 62px;
       color: #3b2416;
+      margin-bottom: 8px;
       letter-spacing: 1px;
     }
 
     .hero h2 {
       color: #b8860b;
       font-size: 28px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 19px;
       max-width: 720px;
-      margin: 0 auto 32px;
-      color: #4b382c;
+      margin: auto;
+      font-size: 19px;
+      color: #594638;
+      margin-bottom: 35px;
     }
 
     .hero-buttons {
@@ -98,47 +139,68 @@
 
     .btn {
       display: inline-block;
-      background: #b8860b;
+      background: linear-gradient(135deg, #b8860b, #d4af37);
       color: white;
-      padding: 14px 28px;
-      border-radius: 7px;
+      padding: 14px 30px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      box-shadow: 0 7px 18px rgba(184,134,11,0.25);
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #3b2416;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(184,134,11,0.35);
     }
 
     .btn-outline {
       display: inline-block;
       background: transparent;
       color: #3b2416;
-      padding: 13px 27px;
+      padding: 12px 28px;
       border: 2px solid #b8860b;
-      border-radius: 7px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .btn-outline:hover {
-      background: #b8860b;
+      background: #3b2416;
       color: white;
+      border-color: #3b2416;
     }
 
+    /* GENERAL SECTIONS */
+
     section {
-      padding: 75px 8%;
+      padding: 85px 8%;
       text-align: center;
     }
 
     section h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
+      font-size: 36px;
       color: #3b2416;
+      margin-bottom: 15px;
     }
+
+    .section-title-line {
+      width: 55px;
+      height: 3px;
+      background: #d4af37;
+      margin: 0 auto 25px;
+      border-radius: 5px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 17px;
+      color: #5c4a3e;
+    }
+
+    /* ABOUT */
 
     .about {
       background: #f7efe5;
@@ -148,27 +210,28 @@
       max-width: 850px;
       margin: auto;
       font-size: 17px;
+      color: #4e3b2f;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 25px;
-      margin-top: 40px;
+      margin-top: 45px;
     }
 
     .about-card {
-      background: #ffffff;
+      background: rgba(255,255,255,0.85);
       border: 1px solid #e5d8c8;
-      border-radius: 12px;
-      padding: 30px 22px;
-      text-align: center;
+      border-radius: 15px;
+      padding: 32px 24px;
       transition: 0.3s;
+      box-shadow: 0 5px 18px rgba(59,36,22,0.05);
     }
 
     .about-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(59,36,22,0.12);
     }
 
     .about-card h3 {
@@ -177,13 +240,7 @@
       margin-bottom: 12px;
     }
 
-    .about-card p {
-      font-size: 16px;
-    }
-
     .values-list {
-      margin-top: 15px;
-      padding-left: 0;
       list-style: none;
     }
 
@@ -192,71 +249,86 @@
       font-weight: bold;
     }
 
-    .section-intro {
-      max-width: 750px;
-      margin: 0 auto 10px;
-      font-size: 17px;
-      color: #4b382c;
-    }
+    /* SERVICES */
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
-      margin-top: 35px;
+      margin-top: 45px;
     }
 
     .card {
       background: #fffaf5;
       border: 1px solid #e5d8c8;
-      border-radius: 12px;
-      padding: 30px 20px;
+      border-radius: 15px;
+      padding: 32px 22px;
       transition: 0.3s;
+      box-shadow: 0 5px 18px rgba(59,36,22,0.05);
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+      transform: translateY(-7px);
+      box-shadow: 0 14px 30px rgba(59,36,22,0.12);
+      border-color: #d4af37;
     }
 
     .card h3 {
       color: #b8860b;
-      margin-bottom: 10px;
       font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #5a493d;
     }
 
     .card-btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 10px 20px;
-      background: #b8860b;
+      background: #3b2416;
       color: white;
-      text-decoration: none;
+      padding: 9px 19px;
       border-radius: 6px;
+      text-decoration: none;
       font-size: 14px;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .card-btn:hover {
-      background: #3b2416;
+      background: #b8860b;
     }
 
+    /* PROGRAMMES */
+
     .programmes {
-      background: #f7efe5;
+      background: linear-gradient(135deg, #f7efe5, #fffaf5);
     }
 
     .programme-card {
-      background: #ffffff;
+      background: white;
       border: 1px solid #e5d8c8;
-      border-radius: 12px;
-      padding: 32px 22px;
+      border-radius: 15px;
+      padding: 34px 23px;
       transition: 0.3s;
+      box-shadow: 0 5px 18px rgba(59,36,22,0.05);
     }
 
     .programme-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+      transform: translateY(-7px);
+      box-shadow: 0 14px 30px rgba(59,36,22,0.12);
+    }
+
+    .programme-tag {
+      display: inline-block;
+      background: #f7efe5;
+      color: #3b2416;
+      padding: 5px 13px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .programme-card h3 {
@@ -265,32 +337,17 @@
       margin-bottom: 12px;
     }
 
-    .programme-card p {
-      font-size: 16px;
-    }
-
-    .programme-tag {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 5px 12px;
-      border-radius: 20px;
-      background: #f7efe5;
-      color: #3b2416;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    /* CONTACT SECTION */
+    /* CONTACT */
 
     .contact {
       background: #ffffff;
     }
 
     .contact-intro {
-      max-width: 700px;
-      margin: 0 auto 40px;
+      max-width: 720px;
+      margin: auto;
+      color: #5a493d;
       font-size: 17px;
-      color: #4b382c;
     }
 
     .contact-grid {
@@ -298,40 +355,41 @@
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 25px;
       max-width: 1000px;
-      margin: auto;
+      margin: 45px auto 0;
     }
 
     .contact-card {
       background: #fffaf5;
       border: 1px solid #e5d8c8;
-      border-radius: 12px;
-      padding: 30px 20px;
+      border-radius: 15px;
+      padding: 32px 20px;
       transition: 0.3s;
+      box-shadow: 0 5px 18px rgba(59,36,22,0.05);
     }
 
     .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(59, 36, 22, 0.10);
+      transform: translateY(-7px);
+      box-shadow: 0 14px 30px rgba(59,36,22,0.12);
+      border-color: #d4af37;
     }
 
     .contact-icon {
-      font-size: 34px;
-      margin-bottom: 12px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .contact-card h3 {
       color: #b8860b;
-      margin-bottom: 10px;
       font-size: 20px;
+      margin-bottom: 8px;
     }
 
     .contact-card p {
-      font-size: 16px;
-      margin-bottom: 15px;
+      color: #5a493d;
+      margin-bottom: 12px;
     }
 
     .contact-link {
-      display: inline-block;
       color: #3b2416;
       font-weight: bold;
       text-decoration: none;
@@ -343,51 +401,65 @@
     }
 
     .contact-buttons {
-      margin-top: 35px;
+      margin-top: 40px;
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 15px;
       flex-wrap: wrap;
     }
+
+    /* FOOTER */
 
     footer {
       background: #3b2416;
       color: white;
       text-align: center;
-      padding: 25px 15px;
+      padding: 30px 15px;
     }
 
     footer p {
       margin: 5px 0;
     }
 
+    footer .gold {
+      color: #d4af37;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 700px) {
 
       header {
         flex-direction: column;
         gap: 12px;
+        padding: 12px 5%;
       }
 
       nav {
-        text-align: center;
+        justify-content: center;
       }
 
       nav a {
         margin: 0 6px;
-        font-size: 14px;
+        font-size: 13px;
+      }
+
+      .logo img {
+        width: 55px;
+        height: 55px;
       }
 
       .hero {
-        min-height: 78vh;
-        padding: 60px 20px;
+        min-height: 80vh;
+        padding: 65px 20px;
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 43px;
       }
 
       .hero h2 {
-        font-size: 22px;
+        font-size: 21px;
       }
 
       .hero p {
@@ -395,15 +467,17 @@
       }
 
       section {
-        padding: 60px 6%;
+        padding: 65px 6%;
       }
 
       section h2 {
         font-size: 30px;
       }
 
-      .contact-card {
-        padding: 25px 18px;
+      .contact-grid,
+      .services,
+      .about-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -460,6 +534,8 @@
 
   <h2>About Tajweed Tunes</h2>
 
+  <div class="section-title-line"></div>
+
   <p class="about-intro">
     Tajweed Tunes is a Qur'anic and educational platform dedicated
     to promoting excellence in Qur'an recitation, Tajweed,
@@ -471,21 +547,27 @@
   <div class="about-grid">
 
     <div class="about-card">
+
       <h3>Our Vision</h3>
+
       <p>
         To become a trusted platform for Qur'anic excellence,
         nurturing generations who recite, memorize, understand
         and live by the teachings of the Qur'an.
       </p>
+
     </div>
 
     <div class="about-card">
+
       <h3>Our Mission</h3>
+
       <p>
         To provide quality Qur'anic education through effective
         Tajweed instruction, memorization, revision and beneficial
         Islamic learning in a supportive and structured environment.
       </p>
+
     </div>
 
     <div class="about-card">
@@ -510,16 +592,16 @@
 
   <h2>Our Services</h2>
 
+  <div class="section-title-line"></div>
+
   <p class="section-intro">
-    We provide structured Qur'anic and educational services designed
-    to help learners improve their recitation, Tajweed, memorization
-    and Qur'anic revision.
+    Structured Qur'anic and educational services designed to help
+    learners improve their recitation, Tajweed, memorization and revision.
   </p>
 
   <div class="services">
 
     <div class="card">
-
       <h3>Qur'an Recitation</h3>
 
       <p>
@@ -527,14 +609,10 @@
         proper pronunciation and practical Tajweed application.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Contact Us
-      </a>
-
+      <a href="#contact" class="card-btn">Contact Us</a>
     </div>
 
     <div class="card">
-
       <h3>Tajweed Classes</h3>
 
       <p>
@@ -542,14 +620,10 @@
         practical exercises and continuous correction.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Contact Us
-      </a>
-
+      <a href="#contact" class="card-btn">Contact Us</a>
     </div>
 
     <div class="card">
-
       <h3>Qur'an Memorization</h3>
 
       <p>
@@ -557,14 +631,10 @@
         and effective Qur'an memorization practices.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Contact Us
-      </a>
-
+      <a href="#contact" class="card-btn">Contact Us</a>
     </div>
 
     <div class="card">
-
       <h3>Muraja'ah</h3>
 
       <p>
@@ -572,10 +642,7 @@
         guided and effective revision.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Contact Us
-      </a>
-
+      <a href="#contact" class="card-btn">Contact Us</a>
     </div>
 
   </div>
@@ -585,6 +652,8 @@
 <section class="programmes" id="programmes">
 
   <h2>Our Programmes</h2>
+
+  <div class="section-title-line"></div>
 
   <p class="section-intro">
     Explore our Qur'anic programmes designed to support learners,
@@ -603,13 +672,11 @@
 
       <p>
         Educational conversations and inspiring experiences from
-        Qur'an memorizers, teachers and students. The programme
-        highlights their journeys, challenges, lessons and achievements.
+        Qur'an memorizers, teachers and students, highlighting their
+        journeys, challenges, lessons and achievements.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Learn More
-      </a>
+      <a href="#contact" class="card-btn">Learn More</a>
 
     </div>
 
@@ -622,14 +689,11 @@
       <h3>Online Qur'an Classes</h3>
 
       <p>
-        Flexible Qur'anic learning for students through online classes,
-        with guided recitation, Tajweed instruction, memorization
-        and revision support.
+        Flexible Qur'anic learning through online classes, with guided
+        recitation, Tajweed instruction, memorization and revision support.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Learn More
-      </a>
+      <a href="#contact" class="card-btn">Learn More</a>
 
     </div>
 
@@ -647,9 +711,7 @@
         correction and strong Qur'anic retention.
       </p>
 
-      <a href="#contact" class="card-btn">
-        Learn More
-      </a>
+      <a href="#contact" class="card-btn">Learn More</a>
 
     </div>
 
@@ -659,21 +721,25 @@
 
 <section class="contact" id="contact">
 
-  <h2>Contact Tajweed Tunes</h2>
+  <h2>Get in Touch</h2>
+
+  <div class="section-title-line"></div>
 
   <p class="contact-intro">
     We would be pleased to hear from you. For Qur'anic classes,
     Tajweed lessons, memorization, Muraja'ah or programme enquiries,
-    please contact us through any of the channels below.
+    please contact Tajweed Tunes through any of the channels below.
   </p>
 
   <div class="contact-grid">
+
+    <!-- EMAIL -->
 
     <div class="contact-card">
 
       <div class="contact-icon">✉️</div>
 
-      <h3>Email</h3>
+      <h3>Email Us</h3>
 
       <p>
         Send us an email for enquiries and further information.
@@ -687,9 +753,11 @@
 
     </div>
 
+    <!-- WHATSAPP -->
+
     <div class="contact-card">
 
-      <div class="contact-icon">📱</div>
+      <div class="contact-icon">💬</div>
 
       <h3>WhatsApp</h3>
 
@@ -706,20 +774,21 @@
 
     </div>
 
+    <!-- PHONE CALL -->
+
     <div class="contact-card">
 
-      <div class="contact-icon">📱</div>
+      <div class="contact-icon">☎️</div>
 
-      <h3>WhatsApp</h3>
+      <h3>Phone Call</h3>
 
       <p>
-        You can also reach us through our second WhatsApp line.
+        Call Tajweed Tunes directly for enquiries and assistance.
       </p>
 
       <a
-        href="https://wa.me/2348020813530"
-        class="contact-link"
-        target="_blank">
+        href="tel:+2348020813530"
+        class="contact-link">
         08020813530
       </a>
 
@@ -742,15 +811,26 @@
       Chat on WhatsApp
     </a>
 
+    <a
+      href="tel:+2348020813530"
+      class="btn-outline">
+      Call Us
+    </a>
+
   </div>
 
 </section>
 
 <footer>
 
-  <p>© 2026 Tajweed Tunes. All Rights Reserved.</p>
+  <p>
+    © 2026 <span class="gold">Tajweed Tunes</span>.
+    All Rights Reserved.
+  </p>
 
-  <p>Qur'anic & Educational Services</p>
+  <p>
+    Qur'anic & Educational Services
+  </p>
 
 </footer>
 
