@@ -118,6 +118,8 @@
       font-weight: bold;
       box-shadow: 0 7px 18px rgba(184,134,11,0.25);
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -276,8 +278,6 @@
       margin-bottom: 15px;
     }
 
-    /* SERVICE DETAILS */
-
     .service-details {
       background: #ffffff;
     }
@@ -311,8 +311,6 @@
     .detail-box li {
       margin: 8px 0;
     }
-
-    /* SOCIAL MEDIA */
 
     .social-media {
       background: #ffffff;
@@ -380,8 +378,6 @@
       font-size: 15px;
     }
 
-    /* CONTACT */
-
     .contact {
       background: #ffffff;
     }
@@ -422,6 +418,67 @@
 
     .contact-buttons {
       margin-top: 40px;
+    }
+
+    /* REGISTRATION FORM */
+
+    .registration {
+      background: linear-gradient(135deg, #f7efe5, #ffffff);
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 40px auto 0;
+      background: #fffaf5;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid #e5d8c8;
+      box-shadow: 0 10px 30px rgba(59,36,22,0.08);
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #3b2416;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d8c8b7;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      color: #3b2416;
+      background: white;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #b8860b;
+      box-shadow: 0 0 0 3px rgba(184,134,11,0.10);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 13px;
+      color: #756154;
     }
 
     footer {
@@ -496,6 +553,10 @@
       .social-card {
         padding: 22px;
       }
+
+      .form-container {
+        padding: 25px 18px;
+      }
     }
   </style>
 </head>
@@ -513,6 +574,7 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#programmes">Programmes</a>
+    <a href="#registration">Register</a>
     <a href="#social">Social Media</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -538,8 +600,8 @@
         Explore Our Services
       </a>
 
-      <a href="#contact" class="btn-outline">
-        Contact Us
+      <a href="#registration" class="btn-outline">
+        Register / Enquire
       </a>
 
     </div>
@@ -616,7 +678,7 @@
         Improve your Qur'an recitation through guided correction,
         proper pronunciation and practical Tajweed application.
       </p>
-      <a href="#recitation" class="card-btn">Learn More</a>
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
 
     <div class="card">
@@ -625,7 +687,7 @@
         Learn the rules of Tajweed through structured lessons,
         practical exercises and continuous correction.
       </p>
-      <a href="#tajweed" class="card-btn">Learn More</a>
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
 
     <div class="card">
@@ -634,7 +696,7 @@
         Receive structured support for Hifz, memorization correction
         and effective Qur'an memorization practices.
       </p>
-      <a href="#memorization" class="card-btn">Learn More</a>
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
 
     <div class="card">
@@ -643,96 +705,8 @@
         Strengthen Qur'an retention through consistent,
         guided and effective revision.
       </p>
-      <a href="#murajaah" class="card-btn">Learn More</a>
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
-
-  </div>
-
-</section>
-
-<section class="service-details">
-
-  <h2>Service Details</h2>
-
-  <div class="section-title-line"></div>
-
-  <div class="detail-box" id="recitation">
-
-    <h3>Qur'an Recitation</h3>
-
-    <p>
-      Our Qur'an Recitation service helps learners improve their
-      reading through continuous practice, correction and guidance.
-    </p>
-
-    <ul>
-      <li>Correction of pronunciation and recitation mistakes</li>
-      <li>Guided Qur'an reading practice</li>
-      <li>Improvement of fluency and confidence</li>
-      <li>Practical application of Tajweed rules</li>
-    </ul>
-
-    <a href="#contact" class="card-btn">Enquire Now</a>
-
-  </div>
-
-  <div class="detail-box" id="tajweed">
-
-    <h3>Tajweed Classes</h3>
-
-    <p>
-      Structured Tajweed lessons designed to help students understand
-      and apply the rules of Qur'anic recitation correctly.
-    </p>
-
-    <ul>
-      <li>Makharij and correct pronunciation</li>
-      <li>Tajweed rules and practical application</li>
-      <li>Regular recitation correction</li>
-      <li>Structured learning for different levels</li>
-    </ul>
-
-    <a href="#contact" class="card-btn">Enquire Now</a>
-
-  </div>
-
-  <div class="detail-box" id="memorization">
-
-    <h3>Qur'an Memorization</h3>
-
-    <p>
-      A structured approach to Qur'an memorization with emphasis
-      on accuracy, consistency, correction and strong retention.
-    </p>
-
-    <ul>
-      <li>Guided memorization</li>
-      <li>Daily or scheduled revision</li>
-      <li>Memorization correction</li>
-      <li>Progress monitoring</li>
-    </ul>
-
-    <a href="#contact" class="card-btn">Enquire Now</a>
-
-  </div>
-
-  <div class="detail-box" id="murajaah">
-
-    <h3>Muraja'ah</h3>
-
-    <p>
-      Consistent and guided revision designed to strengthen Qur'an
-      retention and prevent previously memorized portions from being forgotten.
-    </p>
-
-    <ul>
-      <li>Regular revision schedules</li>
-      <li>Recitation correction</li>
-      <li>Retention strengthening</li>
-      <li>Progress assessment</li>
-    </ul>
-
-    <a href="#contact" class="card-btn">Enquire Now</a>
 
   </div>
 
@@ -752,7 +726,6 @@
   <div class="services">
 
     <div class="programme-card">
-
       <span class="programme-tag">Educational Programme</span>
 
       <h3>Huffaz Experience</h3>
@@ -763,12 +736,10 @@
         journeys, challenges, lessons and achievements.
       </p>
 
-      <a href="#contact" class="card-btn">Learn More</a>
-
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
 
     <div class="programme-card">
-
       <span class="programme-tag">Online Learning</span>
 
       <h3>Online Qur'an Classes</h3>
@@ -778,12 +749,10 @@
         recitation, Tajweed instruction, memorization and revision support.
       </p>
 
-      <a href="#contact" class="card-btn">Learn More</a>
-
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
 
     <div class="programme-card">
-
       <span class="programme-tag">Intensive Programme</span>
 
       <h3>Intensive Hifz</h3>
@@ -794,9 +763,95 @@
         correction and strong Qur'anic retention.
       </p>
 
-      <a href="#contact" class="card-btn">Learn More</a>
-
+      <a href="#registration" class="card-btn">Enquire Now</a>
     </div>
+
+  </div>
+
+</section>
+
+<section class="registration" id="registration">
+
+  <h2>Registration & Enquiry</h2>
+
+  <div class="section-title-line"></div>
+
+  <p class="section-intro">
+    Interested in joining one of our Qur'anic services or programmes?
+    Fill in the form below and send your enquiry directly to Tajweed Tunes.
+  </p>
+
+  <div class="form-container">
+
+    <form onsubmit="sendToWhatsApp(event)">
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service / Programme</label>
+
+        <select id="service" required>
+
+          <option value="">Select a service or programme</option>
+
+          <option>Qur'an Recitation</option>
+
+          <option>Tajweed Classes</option>
+
+          <option>Qur'an Memorization</option>
+
+          <option>Muraja'ah</option>
+
+          <option>Huffaz Experience</option>
+
+          <option>Online Qur'an Classes</option>
+
+          <option>Intensive Hifz</option>
+
+          <option>General Enquiry</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          placeholder="Tell us how we can assist you..."
+          required></textarea>
+
+      </div>
+
+      <button type="submit" class="btn">
+        Send via WhatsApp
+      </button>
+
+      <p class="form-note">
+        Your enquiry will open in WhatsApp and can be sent directly to Tajweed Tunes.
+      </p>
+
+    </form>
 
   </div>
 
@@ -870,9 +925,9 @@
   <div class="section-title-line"></div>
 
   <p class="contact-intro">
-    We would be pleased to hear from you. For Qur'anic classes,
-    Tajweed lessons, memorization, Muraja'ah or programme enquiries,
-    please contact Tajweed Tunes through any of the channels below.
+    For Qur'anic classes, Tajweed lessons, memorization,
+    Muraja'ah or programme enquiries, please contact us through
+    any of the channels below.
   </p>
 
   <div class="contact-grid">
@@ -971,6 +1026,31 @@
   </p>
 
 </footer>
+
+<script>
+  function sendToWhatsApp(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappMessage =
+      "Assalamu Alaikum Tajweed Tunes,%0A%0A" +
+      "I would like to make an enquiry.%0A%0A" +
+      "Full Name: " + encodeURIComponent(name) + "%0A" +
+      "Phone Number: " + encodeURIComponent(phone) + "%0A" +
+      "Service / Programme: " + encodeURIComponent(service) + "%0A" +
+      "Message: " + encodeURIComponent(message);
+
+    window.open(
+      "https://wa.me/2348160633435?text=" + whatsappMessage,
+      "_blank"
+    );
+  }
+</script>
 
 </body>
 </html>
